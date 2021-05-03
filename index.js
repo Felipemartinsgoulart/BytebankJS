@@ -1,7 +1,4 @@
-class Cliente {
-    nome;
-    cpf;
-}
+
 
 class ContaCorrente {
     agencia;
@@ -10,6 +7,12 @@ class ContaCorrente {
         if (this.saldo >= valor){
             this.saldo -= valor;
         }
+    }
+    depositar(valor){
+        if(valor <= 0){
+            return;
+        }
+        this._saldo += valor;
     }
 }
 
